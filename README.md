@@ -20,7 +20,7 @@
 
 5. Now run the smartphones spider by:
     
-    `scrapy crawl smartphones -o phones.jl`
+    `scrapy crawl smartphones -o output/phones.jl`
 
     This will output the data in JSON Lines format.
 
