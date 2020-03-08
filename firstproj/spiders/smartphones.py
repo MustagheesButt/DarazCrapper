@@ -26,15 +26,3 @@ class SmartphonesSpider(scrapy.Spider):
         for href in response.selector.css('li.ant-pagination-item > a::attr(href)').getall():
             if href is not None:
                 yield SeleniumRequest(url=response.urljoin(href), callback=self.parse_result)
-
-    def parse(self, response):
-        for sp in response.css('div.c2prKC'):
-            yield {
-                'title': sp.css('.c16H9d > a::text').get(),
-                'price': sp.css('.c3gUW0 > span::text').get(),
-                'discount': sp.css('span.c1hkC1::text').get(),
-                'rating': 1,
-                'ratings': 1
-            }
-
-        # yield from response.follow_all(css='ul.pager a', callback=self.parse)
