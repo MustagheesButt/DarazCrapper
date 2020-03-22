@@ -1,11 +1,14 @@
 import scrapy
 from scrapy_selenium import SeleniumRequest
+import re
 
 
-class SmartphonesSpider(scrapy.Spider):
-    name = "smartphones"
+# 273999 items on daraz in this category
+
+class ComputingSpider(scrapy.Spider):
+    name = "computing"
     start_urls = [
-        'https://www.daraz.pk/smartphones/',
+        'https://www.daraz.pk/computing/',
     ]
 
     def start_requests(self):

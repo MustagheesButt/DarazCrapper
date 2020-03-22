@@ -3,7 +3,6 @@
 1. Make sure you have the latest version of Python 3 installed.
 2. `cd` into the project directory and run:
 
-    `sudo apt-get install python-scrapy`
     `pip install -r requirements.txt`
 
     This will install all the required dependencies.
